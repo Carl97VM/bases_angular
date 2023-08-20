@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bases';
+  public title = 'Bases Angular';
+  public counter = 10;
+
+  increaseBy( value: number ):void{
+    this.counter+=value;
+  }
+  reset():void {
+    this.counter = 10;
+  }
 }
