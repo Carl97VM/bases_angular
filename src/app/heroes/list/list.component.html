@@ -1,11 +1,16 @@
 <h3>list of heros!</h3>
-
-<h3>Heroe Borrado <small class="text-danger">XXXX</small></h3>
-<h3>No borro nada</h3>
+<div *ngIf="deletedHero; else nothingWasDeleted">
+  <!-- El camino del else -->
+  <h3>Heroe Borrado <small class="text-danger">{{ deletedHero }}</small></h3>
+</div>
+<ng-template #nothingWasDeleted>
+  <!-- Referenciado en el ng template -->
+  <h3>No borro nada</h3>
+</ng-template>
 
 
 <button (click)="borrarultimo()" class="btn btn-danger">Borrar</button>
-
+<button class="btn btn-info">Reestablecer</button>
 
 
 <ul class="mt-2 list-group">
