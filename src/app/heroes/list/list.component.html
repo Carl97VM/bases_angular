@@ -1,1 +1,16 @@
-<p>list works!</p>
+<h3>list of heros!</h3>
+
+<h3>Heroe Borrado <small class="text-danger">XXXX</small></h3>
+<h3>No borro nada</h3>
+
+
+<button (click)="borrarultimo()" class="btn btn-danger">Borrar</button>
+
+
+
+<ul class="mt-2 list-group">
+  <li *ngFor="let heroName of heroNames" class="list-group-item">
+    {{ heroName }}
+  </li>
+</ul>
+
