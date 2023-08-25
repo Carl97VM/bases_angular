@@ -17,7 +17,7 @@ import { DbzModule } from './dbz/dbz.module';
     BrowserModule,
     CounterModule,
     HeroesModule,
-    DbzModule
+    DbzModule,
     // importamos desde donde se creo
   ],
   providers: [],
