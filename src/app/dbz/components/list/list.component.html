@@ -8,9 +8,17 @@
     let isEven = even;
     let isOdd = odd
     "
-    class="list-group-item">
-    <strong class="text-primary">{{ i + 1 }}.-</strong>
+    class="list-group-item"
+    [ngClass]="{
+      'list-group-item-success': isFirst,
+      'list-group-item-dark': isLast,
+    }"
+    >
+    <!-- class="list-group-item {{ i=== 0 ? 'list-group-item-success' : '' }}" -->
+    <!-- Para añadir estilos dentro de las clases se puede hacer asi -->
     <!-- Para poner el indice en cada iteracion se hace esto -->
+    <!-- NGclass para clases de manera condicionada -->
+    <strong class="text-primary">{{ i + 1 }}.-</strong>
     <span> {{ character.name }} - </span>
     <strong>Power: </strong>
     <span>{{ character.power }}</span>
