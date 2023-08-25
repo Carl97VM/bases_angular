@@ -22,9 +22,11 @@ export class MainPageComponent {
     }
   ];
   onNewCharacter( character: Character ): void {
-    console.log('Main Page');
-
-    console.log(character);
+    // console.log('Main Page');
+    // console.log(character);
+    this.characters.push(character); // añade al final
+    // this.characters.unshift(character); // añade al inicio
+    // Hasta ahora no es un dato persistente por que no lleva a una bd
 
   }
 
