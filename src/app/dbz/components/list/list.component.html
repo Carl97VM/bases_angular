@@ -8,20 +8,22 @@
     let isEven = even;
     let isOdd = odd
     "
-    class="list-group-item"
+    class="list-group-item d-flex justify-content-between align-items-center"
     [ngClass]="{
       'list-group-item-success': isFirst,
       'list-group-item-dark': isLast,
-    }"
-    >
+    }">
     <!-- class="list-group-item {{ i=== 0 ? 'list-group-item-success' : '' }}" -->
     <!-- Para añadir estilos dentro de las clases se puede hacer asi -->
     <!-- Para poner el indice en cada iteracion se hace esto -->
     <!-- NGclass para clases de manera condicionada -->
-    <strong class="text-primary">{{ i + 1 }}.-</strong>
-    <span> {{ character.name }} - </span>
-    <strong>Power: </strong>
-    <span>{{ character.power }}</span>
+    <div>
+      <strong class="text-primary">{{ i + 1 }}.-</strong>
+      <span> {{ character.name }} - </span>
+      <strong>Power: </strong>
+      <span>{{ character.power }}</span>
+    </div>
+    <button (click)="onDeleteCharacter(i)" class="btn btn-danger">X</button>
 
     <!-- Forma anvigua para detectar las pociciones -->
     <!-- <span> Es el Primero: {{ i ===0 }}</span>
