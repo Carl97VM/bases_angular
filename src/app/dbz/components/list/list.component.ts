@@ -19,12 +19,13 @@ export class ListComponent {
     }
   ];
   @Output()
-  public onDelete: EventEmitter<number> = new EventEmitter();
+  public onDelete: EventEmitter<string> = new EventEmitter();
   // Se define el tipo de datos en el emitter
-  onDeleteCharacter(index: number): void {
+  onDeleteCharacter(id?: string): void {
     // Emitir el id del personaje
-    console.log({ index });
-    this.onDelete.emit(index);
+    if(!id) return;
+    console.log({ id });
+    this.onDelete.emit(id);
 
   }
 }
