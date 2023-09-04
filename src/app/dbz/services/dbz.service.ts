@@ -21,7 +21,7 @@ export class DbzService {
     }
   ];
   // onNewCharacter({name, character}: Character): void {
-  onNewCharacter(character: Character): void {
+  addCharacter(character: Character): void {
     // console.log('Main Page');
     // console.log(character);
     // const newCharacter: Character = {
